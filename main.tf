@@ -42,9 +42,9 @@ resource "aws_iam_instance_profile" "ec2_profile" {
 
 # Create an EC2 instance
 resource "aws_instance" "practice_ec2" {
-  ami                    = var.ec2_ami_id
-  instance_type          = var.ec2_instance_type
-  iam_instance_profile   = aws_iam_instance_profile.ec2_profile.name
+  ami                  = var.ec2_ami_id
+  instance_type        = var.ec2_instance_type
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
     Name        = "PracticeEC2"
